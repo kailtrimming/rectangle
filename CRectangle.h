@@ -17,15 +17,15 @@ private:
 	float height;
 	float width;
 	
+	char* text;
+	
 
 public:
-	
-	
 	
 	/// @name CONSTRUCTORS/DESTRUCTOR
 	/// @{
 	Rectangle();
-	Rectangle(float w, float l); 
+	Rectangle(float w, float l);
 	Rectangle(const Rectangle &r);
 	
 	~Rectangle();
@@ -46,15 +46,15 @@ public:
 	void SetWidth(float w);
 	void SetDim(float w, float h); 
 	
-	
+	void SetText(const char* string);
+		
 	void GetDim(float &w, float &h);
 	float GetHeight();
 	float GetWidth(); 
-	
-	
 	float GetPerimeter(); 
 	float GetArea();
 	
+	void GetText(char* string);
 	/// @}
 	
 	
