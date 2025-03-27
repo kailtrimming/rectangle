@@ -9,6 +9,8 @@
 #define RECTANGLE_H
 
 
+
+
 /// @class Rectangle
 /// @brief to manage an object with the shape of a rectangle
 class Rectangle 
@@ -29,6 +31,12 @@ public:
 	Rectangle(const Rectangle &r);
 	
 	~Rectangle();
+	/// @}
+	
+	/// @name OPERATORS
+	/// @{
+	Rectangle& operator=(const Rectangle &r); 
+	bool operator==(const Rectangle &r);
 	/// @}
 	
 	

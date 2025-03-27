@@ -5,8 +5,8 @@
 ///
 
 #include<iostream> 
-#include "CRectangle.h"
 #include <cstring>
+#include "CRectangle.h" 
 using namespace std;
 
 /// @brief default constructor 
@@ -42,6 +42,31 @@ Rectangle::~Rectangle() {
 	cout << "Rectangle - destructor" << endl;
 	Reset();
 
+}
+
+/// @brief overload of operator = 
+/// @param o reference to the object on the right side of the operator 
+/// @return reference to the object on the left side of the operator 
+Rectangle& Rectangle::operator=(const Rectangle &r) { 
+
+	cout << "Rectangle - operator =" << endl;
+	
+	
+	Init(r);
+	
+	return *this;
+	
+}
+
+/// @brief overload of operator == 
+/// @param r reference to the object on the right side of the operator 
+/// @return true if the two objects have the same width and the same length  
+bool Rectangle::operator==(const Rectangle &r) { 
+
+	if (r.width == width && r.height == height)
+		return true;
+		
+	return false;
 }
 
 
@@ -196,8 +221,8 @@ void Rectangle::Dump() {
 	
 	cout << "Width = " << width << endl;
 	cout << "Heigth = " << height << endl; 
-	cout << "Text = " << text << endl;
-	printf("Text ptr %x\n",text);
+	if (text != NULL)
+		cout << "Text = " << text << endl;
 	
 	
 	cout << endl;
