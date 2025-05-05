@@ -1,7 +1,9 @@
 /*! \file CRectangle.h
 	\brief Declaration of the class Rectangle
 	\author Kail Trimming
-	
+	The `Rectangle` class manages a geometric object with the shape of a rectangle, 
+	providing methods for setting and retrieving dimensions,
+	handling text labels, calculating area and perimeter, and debugging functionalities.
 */
 
 
